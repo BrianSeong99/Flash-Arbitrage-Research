@@ -10,3 +10,5 @@ artifacts
 
 v2-core/
 package-lock.json
+
+private_keys.json

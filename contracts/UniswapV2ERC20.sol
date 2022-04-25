@@ -3,6 +3,9 @@ pragma solidity =0.5.16;
 import './interfaces/IUniswapV2ERC20.sol';
 import './libraries/SafeMath.sol';
 
+import "hardhat/console.sol";
+
+
 contract UniswapV2ERC20 is IUniswapV2ERC20 {
     using SafeMath for uint;
 
@@ -31,7 +34,7 @@ contract UniswapV2ERC20 is IUniswapV2ERC20 {
                 keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)'),
                 keccak256(bytes(name)),
                 keccak256(bytes('1')),
-                chainId,
+                1337, // fixed for testing with local network purpose
                 address(this)
             )
         );
